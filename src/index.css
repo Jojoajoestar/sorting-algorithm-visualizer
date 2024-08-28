@@ -1,0 +1,47 @@
+:root {
+  --backgroundColor: #ffffff;
+  --textColor: #333333;
+  --accentColor: #007bff;
+  --highlightColor: #17a2b8;
+  --buttonHoverColor: #0056b3;
+  --buttonActiveColor: #004085;
+  --separatorColor: #dddddd;
+  --footerBackgroundColor: #f8f9fa;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.visualization {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.array-display {
+  display: flex;
+  align-items: flex-end;
+}
+
+.progress-bar {
+  height: 5px;
+  background-color: var(--accentColor);
+  transition: width 0.2s ease-in-out;
+}

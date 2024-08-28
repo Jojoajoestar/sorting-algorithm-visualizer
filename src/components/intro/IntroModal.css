@@ -1,0 +1,90 @@
+.intro-modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  background-color: var(--background-color);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.intro-modal-header {
+  font-size: 1.75rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.intro-modal-body {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.intro-modal-button {
+  background-color: var(--button-color);
+  color: #fff;
+  margin-top: 20px;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.intro-modal-button:hover {
+  background-color: var(--button-hover-color);
+  transform: translateY(-2px);
+}
+
+.intro-modal-checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 15px;
+}
+
+.intro-modal-checkbox {
+  margin: 0;
+  padding: 0;
+  transform: scale(1.2);
+}
+
+.intro-modal-skip {
+  margin-top: 20px;
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.intro-modal-skip:hover {
+  color: var(--button-hover-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .intro-modal-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .intro-modal-header {
+    font-size: 1.5rem;
+  }
+
+  .intro-modal-body {
+    font-size: 0.9rem;
+  }
+
+  .intro-modal-button {
+    padding: 8px 16px;
+  }
+
+  .intro-modal-skip {
+    font-size: 0.85rem;
+  }
+}

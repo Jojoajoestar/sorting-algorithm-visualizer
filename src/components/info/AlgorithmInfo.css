@@ -1,0 +1,72 @@
+.algorithm-info {
+  margin-top: 20px;
+  padding: 0 15px; /* Added padding for better spacing on smaller screens */
+}
+
+.algorithm-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--accent-color);
+}
+
+.algorithm-info p {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.algorithm-info h4 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.algorithm-info ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.algorithm-info ul li {
+  margin-bottom: 5px;
+}
+
+.algorithm-info ul li a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.algorithm-info ul li a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .algorithm-info {
+    margin-top: 15px;
+  }
+
+  .algorithm-info h3 {
+    font-size: 1.25rem;
+  }
+
+  .algorithm-info h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .algorithm-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .algorithm-info h4 {
+    font-size: 1rem;
+  }
+
+  .algorithm-info p,
+  .algorithm-info ul li {
+    font-size: 0.9rem;
+  }
+}

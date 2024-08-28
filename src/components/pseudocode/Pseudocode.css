@@ -1,0 +1,28 @@
+/* src/components/pseudocode/Pseudocode.css */
+
+.pseudocode {
+  background-color: #f7f7f7;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.pseudocode h3 {
+  margin-bottom: 10px;
+  color: var(--accent-color);
+}
+
+.pseudocode-line {
+  display: flex;
+  align-items: baseline;
+}
+
+.line-number {
+  width: 30px;
+  text-align: right;
+  margin-right: 10px;
+  color: #999;
+}
+
+.highlight {
+  background-color: rgba(255, 255, 0, 0.2); /* Light yellow highlight */
+}

@@ -1,0 +1,212 @@
+/* Overall control panel styling */
+.control-panel {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+  max-width: 800px !important;
+  padding: 8px !important;
+  background-color: var(--background-color) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 8px !important;
+  margin: 0 auto !important;
+  transition: max-height 0.3s ease-in-out !important;
+}
+
+.control-panel .toggle-group {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important; /* Four buttons in the first row */
+  gap: 8px !important;
+  width: 100% !important;
+  margin-bottom: 10px !important;
+}
+
+.control-panel .MuiToggleButton-root {
+  padding: 0 12px !important;
+  height: 42px !important;
+  font-size: 0.875rem !important;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+  background-image: linear-gradient(145deg, #007bff, #0056b3) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 4px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.control-panel .MuiToggleButton-root:hover {
+  background-image: linear-gradient(145deg, #0056b3, #004085) !important;
+  transform: translateY(-4px) !important; /* Increased lift effect */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15) !important; /* Darker shadow on hover */
+}
+
+.control-panel .MuiToggleButton-root.Mui-selected {
+  background-image: linear-gradient(145deg, #0056b3, #003366) !important;
+  color: #fff !important;
+}
+
+.control-panel .slider-container,
+.control-panel .action-buttons-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  gap: 10px !important;
+}
+
+.control-panel .slider-container {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  width: 100% !important;
+}
+
+.control-panel .slider-container Typography {
+  margin-bottom: 0 !important;
+  white-space: nowrap !important;
+}
+
+.control-panel .slider-container Slider {
+  flex: 1 !important;
+  max-width: 200px !important;
+}
+
+.control-panel .action-buttons-container {
+  display: flex !important;
+  justify-content: space-evenly !important;
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+}
+
+.control-panel button {
+  min-width: 80px !important;
+  padding: 0 12px !important;
+  height: 42px !important;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+  background-image: linear-gradient(145deg, #28a745, #218838) !important; /* Green gradient */
+  color: #fff !important;
+  border: none !important;
+  border-radius: 4px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.control-panel button:hover {
+  background-image: linear-gradient(145deg, #218838, #19692c) !important;
+  transform: translateY(-4px) !important; /* Increased lift effect */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15) !important; /* Darker shadow on hover */
+}
+
+.control-panel button:active {
+  transform: translateY(2px) !important; /* Pressed down effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; /* Lighter shadow on active */
+}
+
+.control-panel .button-loading {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.control-panel .button-loading .MuiButton-label::after {
+  content: "" !important;
+  width: 16px !important;
+  height: 16px !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+  border-top-color: transparent !important;
+  border-radius: 50% !important;
+  margin-left: 8px !important;
+  animation: spin 1s linear infinite !important;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg) !important;
+  }
+}
+
+.control-panel .progress-bar {
+  height: 5px !important;
+  background-color: var(--button-color) !important;
+  width: 100% !important;
+  margin-top: 10px !important;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 5px 10px !important;
+  }
+
+  .title {
+    font-size: 1.5rem !important;
+    text-align: center !important;
+    margin-bottom: 10px !important;
+  }
+
+  .control-panel {
+    padding: 8px !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .control-panel .toggle-group {
+    grid-template-columns: repeat(2, 1fr) !important; /* Two buttons per row on small screens */
+    gap: 8px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .control-panel .action-buttons-container {
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .control-panel .slider-container,
+  .control-panel .action-buttons-container {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .control-panel button,
+  .control-panel .MuiToggleButton-root {
+    width: 100% !important;
+    padding: 10px !important;
+  }
+}
+
+/* Additional styling for very small screens */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.2rem !important;
+  }
+
+  .header-container {
+    padding: 5px 10px !important;
+  }
+
+  .control-panel {
+    padding: 8px !important;
+    max-width: 100% !important;
+  }
+
+  .control-panel .toggle-group {
+    grid-template-columns: 1fr !important; /* Stack buttons vertically on very small screens */
+    gap: 8px !important;
+  }
+
+  .control-panel .action-buttons-container {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .control-panel button,
+  .control-panel .MuiToggleButton-root {
+    width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .control-panel .slider-container {
+    margin-bottom: 15px !important;
+  }
+}

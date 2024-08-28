@@ -1,0 +1,79 @@
+/* src/components/footer/Footer.css */
+
+#footer {
+    background-color: #f7f7f7;
+    color: #333;
+    text-align: center;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    padding: 6px; /* Reduced padding for a more compact footer */
+    font-style: italic;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    max-width: 1000px; /* Reduced max-width to prevent horizontal scrolling */
+    margin: 0 auto;
+    padding: 0 10px; /* Decreased padding for a narrower content area */
+}
+
+.motivation {
+    margin-top: 4px;
+    font-weight: bold;
+    font-size: 0.8rem; /* Slightly reduced font size */
+    color: #007bff;
+}
+
+.footer-message {
+    margin-top: 4px;
+    font-style: italic;
+    font-size: 0.8rem; /* Slightly reduced font size */
+    color: #007bff; /* Ensure consistent color usage */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #footer {
+        padding: 5px;
+        font-size: 0.75rem;
+    }
+
+    .motivation {
+        font-size: 0.75rem;
+    }
+
+    .footer-message {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #footer {
+        padding: 4px;
+        font-size: 0.7rem;
+    }
+
+    .motivation {
+        font-size: 0.7rem;
+    }
+
+    .footer-message {
+        font-size: 0.7rem;
+    }
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus,
+a:active {
+    outline: none;
+    color: #0056b3; /* Darker color for better accessibility */
+}

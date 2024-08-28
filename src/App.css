@@ -1,0 +1,227 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #17a2b8;
+  --accent-color: #28a745;
+  --background-color: #f7f7f7;
+  --text-color: #333;
+  --navbar-background: #ffffff;
+  --footer-background: #ffffff;
+  --footer-text-color: #007bff;
+  --bar-color: #007bff;
+  --bar-highlight-color: #ffc107;
+  --button-color: #4CAF50;
+  --button-hover-color: #45a049;
+  --button-active-color: #004085;
+  --separator-color: #dddddd;
+  --footer-background-color: #f8f9fa;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  padding: 10px 15px; /* Decreased padding to reduce gray space */
+  background-color: var(--navbar-background);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px; /* Reduced margin to further decrease gray space */
+  position: relative;
+  flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 5px auto; /* Decreased margin */
+  padding: 0;
+  text-align: center;
+  flex: 1;
+}
+
+.control-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 8px;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  padding: 10px;
+}
+
+.visualization-container {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+  padding-top: 10px; /* Reduced padding to make more room for visualization */
+}
+
+.array-display {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 600px; /* Ensure the tallest bars are visible */
+  width: calc(100% - 40px); /* Reduced width to decrease gray area */
+  background-color: #ffffff;
+  padding: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer {
+  background-color: var(--footer-background);
+  padding: 8px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--footer-text-color);
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1400px;
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+}
+
+.footer-content {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: var(--footer-text-color);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.motivation {
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: var(--footer-text-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 10px; /* Further reduce padding */
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .control-panel-container {
+    width: 100%;
+    justify-content: center;
+    margin-top: 5px; /* Reduce margin to tighten up space */
+  }
+
+  .visualization-container {
+    max-width: 100%;
+    margin-bottom: 15px; /* Reduce bottom margin */
+  }
+
+  .array-display {
+    height: 400px; /* Adjust height for visibility */
+    width: calc(100% - 20px); /* Reduced width to decrease gray area */
+    padding: 0.5rem;
+  }
+
+  .footer {
+    padding: 5px;
+  }
+
+  .footer-content {
+    font-size: 0.8rem;
+  }
+
+  .bar {
+    transform: scaleY(0.9); /* Ensure bars fit well */
+  }
+
+  .header-container {
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+  }
+
+  .control-panel button {
+    flex: 1 1 auto;
+    margin: 5px 0; /* Add margin to buttons for better spacing */
+    width: 48%; /* Ensure buttons are evenly distributed */
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .header-container {
+    padding: 5px 10px;
+  }
+
+  .control-panel {
+    max-width: 100%;
+    padding: 5px;
+  }
+
+  .array-display {
+    height: 350px; /* Ensure visibility of taller bars */
+    width: calc(100% - 10px); /* Almost full width */
+  }
+
+  .footer-content {
+    font-size: 0.75rem;
+  }
+
+  .bar {
+    transform: scaleY(0.85); /* Less scaling for better visibility */
+  }
+
+  .control-panel button {
+    width: 100%; /* Ensure buttons stack vertically */
+    margin: 5px 0; /* Add margin between buttons */
+  }
+}

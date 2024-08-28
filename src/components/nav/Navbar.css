@@ -1,0 +1,56 @@
+:root {
+	--backgroundColor: #ffffff;
+	--textColor: #333333;
+	--accentColor: #007bff;
+	--highlightColor: #17a2b8;
+	--buttonHoverColor: #0056b3;
+	--buttonActiveColor: #004085;
+	--separatorColor: #dddddd;
+	--footerBackgroundColor: #f8f9fa;
+  }
+  
+  .navbar {
+	background-color: var(--backgroundColor);
+	color: var(--textColor);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  #title {
+	margin-top: 0;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	font-size: 2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: var(--accentColor);
+  }
+  
+  .header-controls {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+	#title {
+	  font-size: 1.5rem; /* Smaller font size on smaller screens */
+	  margin-bottom: 10px;
+	}
+  
+	.navbar {
+	  padding: 5px 0; /* Less padding on smaller screens */
+	}
+  
+	.header-controls {
+	  flex-direction: column; /* Stack controls vertically on smaller screens */
+	}
+  }
+  

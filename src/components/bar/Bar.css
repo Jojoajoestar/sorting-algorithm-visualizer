@@ -1,0 +1,35 @@
+/* src/components/bar/Bar.css */
+
+/* Base style for each bar in the sorting visualization */
+.bar {
+    display: inline-block;
+    margin: 1px;
+    border-radius: 6px;
+    transition: height 0.2s ease, background-color 0.2s ease, transform 0.2s ease, filter 0.2s ease;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+}
+
+/* Style for bars in their sorted state */
+.bar[data-color="sorted"] {
+    background: linear-gradient(45deg, #28a745, #81c784);
+    transform: scale(1.05); /* Slightly increase scale on completion */
+    filter: brightness(1.2); /* Increase brightness */
+}
+
+/* Hover effect to indicate interactivity */
+.bar:hover {
+    transform: scale(1.05); /* Slightly increase scale on hover */
+    filter: brightness(1.1); /* Slightly increase brightness on hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+    cursor: pointer;
+}
+
+/* Hover effect for specific bar states */
+.bar[data-color="comparing"]:hover,
+.bar[data-color="swapping"]:hover,
+.bar[data-color="sorted"]:hover {
+    filter: brightness(1.25);
+    transform: scale(1.07);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Consistent shadow on hover */
+}
